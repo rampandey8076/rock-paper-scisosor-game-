@@ -3,72 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rock paper scicssor game</title>
+    <title>Rock Paper Scissors Game</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <script>
-        function r(){
-            let a=Math.floor(Math.random()*2);
-            if(a==0){
-                document.getElementById("ans").innerHTML=" it's a tie <br>"+"computer  choose rock";
-                //0 for rock
-            }
-            else if(a==1){
-                document.getElementById("ans").innerHTML=" you lose <br>"+"computer  choose paper";
-                //1 for paper
-            }
-            else{
-                document.getElementById("ans").innerHTML=" you win <br>"+"computer  choose scicssor";
-            }
-            //2 for scicssor
-        }
-        function
-            p(){
-                let a=Math.floor(Math.random()*2);
-                if(a==0){
-                    document.getElementById("ans").innerHTML=" you win <br>"+"computer  choose rock";
-                    //0 for rock
-                }
-                else if(a==1){
-                    document.getElementById("ans").innerHTML=" it's a tie <br>"+"computer  choose paper";
-                    //1 for paper
-                }
-                else{
-                    document.getElementById("ans").innerHTML="you lose <br>"+"computer  choose scicssor";
-                }
-                //2 for scicssor
-            }
-            function s(){
-                let a=Math.floor(Math.random()*2);
-                if(a==0){
-                    document.getElementById("ans").innerHTML="you lose<br>"+"computer  choose rock";
-                    //0 for rock
-                }
-                else if(a==1){
-                    document.getElementById("ans").innerHTML=" you win<br>"+"computer  choose paper";
-                    //1 for paper
-                }
-                else{
-                    document.getElementById("ans").innerHTML=" it's tie <br>"+"computer  choose scicssor";
-                }
-                //2 for scicssor
-            }
 
-        </script>
-    <h1>Rock paper scicssor game</h1>
+    <h1>Rock Paper Scissors Game</h1>
+
     <center>
-    <span class="btn">
-        <input type="button" hover="lightblue" id="rock" value="👊" onclick="r()"></input>
-        <input type="button" id="paper" value="✋" onclick="p()"></input>
-        <input type="button" id="scicssor" value="✌️" onclick="s()"></input>
+        <div class="btn">
+            <button id="rock" onclick="r()">👊</button>
+            <button id="paper" onclick="p()">✋</button>
+            <button id="scissor" onclick="s()">✌️</button>
+        </div>
+
         <p id="ans"></p>
-            </center>
+    </center>
 
+    <!-- Only link JS file -->
+    <script src="script.js"></script>
 
-        </span>           
-    
-    
 </body>
 </html>
