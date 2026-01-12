@@ -1,52 +1,91 @@
- h1{
-    color: white;
-    text-align: center;
-    font-size: 50px;
-    border: 5px solid green;
-    background-color: black;
-    text-decoration: underline;
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif;
 }
-input{
-    text-align:center;
-    margin: 20px;
-    height: 100px;
-    width: 100px;
-    border-radius:100px;
-    border:2px solid black;
-    font-size: 40px;
 
-    
-}
-p{
-    font-size: 30px;
-    color:white;
-    text-align: center;
-    text-decoration: solid;
-    text-transform: capitalize;
-    font-weight: bold;
-    background-color:black;
-    border: 5px solid green;
-    
-}
+/* Background */
 body{
-    background-color : lightyellow;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn button {
-    font-size: 50px;       
-    padding: 20px 40px;    
-    border-radius: 10px;   
-    cursor: pointer;       
-    margin: 10px;          
-    transition: transform 0.2s; 
+/* Title */
+h1{
+    color: white;
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    animation: fadeDown 1s ease;
 }
 
-
-.btn button:hover {
-    transform: scale(1.2); 
-    background-color: lightblue;
+/* Button container */
+.btn{
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
 }
 
+/* Game buttons */
+.btn button{
+    font-size: 60px;
+    padding: 25px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
 
+/* Hover animation */
+.btn button:hover{
+    transform: translateY(-10px) scale(1.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
 
-  
+/* Click animation */
+.btn button:active{
+    transform: scale(0.95);
+}
+
+/* Result text */
+#ans{
+    font-size: 28px;
+    color: white;
+    padding: 15px 25px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 12px;
+    min-height: 50px;
+    animation: fadeUp 1s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes fadeDown{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
